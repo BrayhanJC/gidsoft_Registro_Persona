@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <menuitem name="Registro de personas" id="menu_sistema" sequence="1" />
+        <menuitem name="Administracion Persona" id="menu_administrativo"  parent="menu_sistema" />  
+    </data>
+</openerp>

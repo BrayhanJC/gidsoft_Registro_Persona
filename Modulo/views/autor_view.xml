@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- Definicion Elementos de Busqueda-->
+		<record id="persona_view_search" model="ir.ui.view">
+			<field name="name">persona_view_search</field>
+			<field name="model">gidsoft.registro.persona</field>
+			<field name="arch" type="xml">
+				<search string="Buscar Por: ">
+					<field name="identificacion"/>
+					<field name="edad"/>
+					<field name="sexo"/>
+				</search>
+			</field>
+		</record>
+		<!-- Definicion Vista Formulario -->
+		<record id="persona_view_form" model="ir.ui.view">
+			<field name="name">persona_view_form</field>
+			<field name="model">gidsoft.registro.persona</field>
+			<field name="arch" type="xml">
+				<form string="Registro Persona">
+						<field name="name"/>
+						<field name="identificacion"/>
+						<field name="sexo"/>
+						<field name="fecha_ingreso"/>
+						<field name="edad"/>
+						<field name="mayor_edad"/>
+						<field name="foto"/>
+						<field name="nota"/>					
+				</form>
+			</field>
+		</record>
+
+
+		<!-- Definicio Vista Arbol (Lista) -->
+		<record id="persona_view_tree" model="ir.ui.view">
+			<field name="name">persona_view_tree</field>
+			<field name="model">gidsoft.registro.persona</field>
+			<field name="arch" type="xml">
+				<tree string="Personas Registradas">
+						<field name="name"/>
+						<field name="identificacion"/>
+						<field name="sexo"/>
+						<field name="fecha_ingreso"/>
+						<field name="edad"/>
+						<field name="mayor_edad"/>
+						<field name="foto"/>
+						<field name="nota"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- Definicion Comportamiento Vistas Modelo -->
+		<record id="action_persona" model="ir.actions.act_window">
+			<field name="name">Autores</field>
+			<field name="res_model">gidsoft.registro.persona</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		<!-- Indicar submenu que mostrara vistas -->
+		<menuitem action="action_persona" id="item_autor" name="Sistema Persona" parent="menu_administrativo"/>
+	</data>
+</openerp>

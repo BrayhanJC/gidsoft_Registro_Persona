@@ -1,0 +1,1 @@
+mklink /j "C:\Program Files (x86)\OpenERP 7.0-20130907-231103\Server\server\openerp\addons\gidsoft_peliculas" "C:\gidsoft_peliculas"
